@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sari Fusha - Scientific Research</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="Icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>Dr. Sari <span>Fusha</span></h1>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" id="loginBtn">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Admin Login</h2>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button id="loginSubmit" class="btn">Submit</button>
+        </div>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Dr. Sari Fusha</h2>
+            <p class="hero-subtitle">Health Sciences & Scientific Research</p>
+            <p>Dedicated to advancing medical knowledge and fostering innovation.</p>
+            <a href="#research" class="btn">Explore Our Research</a>
+            <a href="#" class="btn" id="createPostBtn" style="display: none;">Create Posts</a>
+        </div>
+    </section>
+
+    <section id="createPost" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Create a New Post</h2>
+            <div class="post-form">
+                <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+                <div class="file-inputs">
+                    <label for="postImage" class="file-label"><i class="fas fa-camera"></i> Photo</label>
+                    <input type="file" id="postImage" accept="image/*" style="display: none;">
+                    <label for="postVideo" class="file-label"><i class="fas fa-video"></i> Video</label>
+                    <input type="file" id="postVideo" accept="video/*" style="display: none;">
+                </div>
+                <div class="form-buttons">
+                    <button id="submitPost" class="btn">Submit</button>
+                    <button id="cancelPost" class="btn btn-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="mainPage">
+        <section id="posts">
+            <div class="container">
+                <h2 class="section-title">Latest Posts</h2>
+                <div id="posts-container" class="posts-grid">
+                    </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-flask"></i></div>
+                        <div class="service-content">
+                            <h3>Clinical Research</h3>
+                            <p>Comprehensive clinical trials and research studies.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-dna"></i></div>
+                        <div class="service-content">
+                            <h3>Genomic Analysis</h3>
+                            <p>Advanced genetic testing and analysis.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-brain"></i></div>
+                        <div class="service-content">
+                            <h3>Neuroscience</h3>
+                            <p>Investigating brain function and neurological conditions.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-virus"></i></div>
+                        <div class="service-content">
+                            <h3>Infectious Disease</h3>
+                            <p>Research on pathogens and epidemiology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" style="background-color: var(--light-gray);">
+            <div class="container">
+                <h2 class="section-title">Research Highlights</h2>
+                <div class="research-container">
+                    <div class="research-card">
+                        <div class="research-image">
+                            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1374&q=80" alt="Cancer Research">
+                        </div>
+                        <div class="research-content">
+                            <span class="research-category">Oncology</span>
+                            <h3>Targeted Therapy</h3>
+                            <p>New results for targeted immunotherapy in treating triple-negative breast cancer.</p>
+                            <a href="https://en.wikipedia.org/wiki/Targeted_therapy_of_breast_cancer" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="research-card">
+                        <div class="research-image">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Cardiology Research">
+                        </div>
+                        <div class="research-content">
+                            <span class="research-category">Cardiology</span>
+                            <h3>AI in Heart Disease Diagnosis</h3>
+                            <p>Artificial intelligence algorithms now detect early signs of heart disease with 95% accuracy.</p>
+                            <a href="https://en.wikipedia.org/wiki/Artificial_intelligence_in_healthcare" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="research-card">
+                        <div class="research-image">
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Neurology Research">
+                        </div>
+                        <div class="research-content">
+                            <span class="research-category">Neurology</span>
+                            <h3>Breakthrough in Alzheimer's Treatment</h3>
+                            <p>New drug therapy shows potential to slow cognitive decline in early-stage Alzheimer's patients.</p>
+                            <a href="https://en.wikipedia.org/wiki/Anti-amyloid_antibodies" class="btn" style="margin-top: 1rem; padding: 0.5rem 1.2rem;">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="container">
+                <h2 class="section-title">Our Research Team</h2>
+                <div class="team-container">
+                    <div class="team-member">
+                        <div class="member-photo"><img src="Dr. Sari Fusha.png" alt="Dr. Sari Fusha"></div>
+                        <h4>Dr. Sari Fusha</h4>
+                        <p class="member-title">Medical Doctor<br>Lecturer & Scientific Researcher - Faculty of Medicine</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo"><img src="Dr. Muhamed Hoxha.png" alt="Dr. Muhamed Hoxha"></div>
+                        <h4>Dr. Muhamed Hoxha</h4>
+                        <p class="member-title">Medical Doctor<br>Lecturer & Scientific Researcher - Faculty of Medicine</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo"><img src="./Dr. Breidi Vogli.png" alt="Dr. Breidi Vogli"></div>
+                        <h4>Dr. Breidi Vogli</h4>
+                        <p class="member-title">Medical Doctor</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo"><img src="Msc. Flutura EmiriMsc.png" alt="Msc. Flutura Emiri"></div>
+                        <h4>Msc. Flutura Emiri</h4>
+                        <p class="member-title">Psychologist & Clinical Psychotherapist</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo"><img src="Profile.png" alt="Bukuri Hoxha"></div>
+                        <h4>Bukuri Hoxha</h4>
+                        <p class="member-title">Medical Doctor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background-color: var(--light-gray);">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Reach out to us for collaboration or research inquiries.</p>
+                        <br>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+355 69 787 1915</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>drfusha@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Sari Fusha. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // DOM Elements
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeBtn = document.querySelector('.close');
+        const loginSubmit = document.getElementById('loginSubmit');
+        const passwordInput = document.getElementById('passwordInput');
+        const createPostBtn = document.getElementById('createPostBtn');
+        const createPostSection = document.getElementById('createPost');
+        const mainPage = document.getElementById('mainPage');
+        const submitPostBtn = document.getElementById('submitPost');
+        const cancelPostBtn = document.getElementById('cancelPost');
+        const postContent = document.getElementById('postContent');
+        const postImage = document.getElementById('postImage');
+        const postVideo = document.getElementById('postVideo');
+        const postsContainer = document.getElementById('posts-container');
+
+        let isLoggedIn = false;
+
+        // --- Authentication ---
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+        });
+
+        loginSubmit.addEventListener('click', () => {
+            // Updated line below to check for the new password
+            if (passwordInput.value === 'SARIFUSHA') {
+                isLoggedIn = true;
+                loginModal.style.display = 'none';
+                createPostBtn.style.display = 'inline-block';
+                passwordInput.value = '';
+                renderPosts();
+            } else {
+                alert('Incorrect password');
+            }
+        });
+
+        // --- Post Creation UI ---
+        createPostBtn.addEventListener('click', () => {
+            createPostSection.style.display = 'block';
+            mainPage.style.display = 'none';
+        });
+
+        cancelPostBtn.addEventListener('click', () => {
+            createPostSection.style.display = 'none';
+            mainPage.style.display = 'block';
+        });
+
+        // --- Firebase Post Management ---
+        submitPostBtn.addEventListener('click', async () => {
+            const content = postContent.value;
+            const imageFile = postImage.files[0];
+            const videoFile = postVideo.files[0];
+
+            if (!content && !imageFile && !videoFile) {
+                alert('Please add some content or a file.');
+                return;
+            }
+
+            submitPostBtn.disabled = true;
+            submitPostBtn.textContent = 'Submitting...';
+
+            try {
+                let mediaUrl = '';
+                let mediaType = '';
+                let storagePath = '';
+
+                if (imageFile) {
+                    mediaType = 'image';
+                    storagePath = `posts/${Date.now()}_${imageFile.name}`;
+                    const storageRef = firebase.storage().ref(storagePath);
+                    const snapshot = await storageRef.put(imageFile);
+                    mediaUrl = await snapshot.ref.getDownloadURL();
+                } else if (videoFile) {
+                    mediaType = 'video';
+                    storagePath = `posts/${Date.now()}_${videoFile.name}`;
+                    const storageRef = firebase.storage().ref(storagePath);
+                    const snapshot = await storageRef.put(videoFile);
+                    mediaUrl = await snapshot.ref.getDownloadURL();
+                }
+
+                await firebase.firestore().collection('posts').add({
+                    content: content,
+                    mediaUrl: mediaUrl,
+                    mediaType: mediaType,
+                    storagePath: storagePath,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+
+                postContent.value = '';
+                postImage.value = null;
+                postVideo.value = null;
+                createPostSection.style.display = 'none';
+                mainPage.style.display = 'block';
+                renderPosts();
+
+            } catch (error) {
+                console.error("Error creating post: ", error);
+                let errorMessage = "An error occurred while creating the post.";
+                if (error.code) {
+                    switch (error.code) {
+                        case 'storage/unauthorized':
+                            errorMessage = "Permission denied. Please check your Firebase Storage security rules to allow uploads.";
+                            break;
+                        case 'permission-denied':
+                            errorMessage = "Permission denied. Please check your Firestore security rules to allow writing documents.";
+                            break;
+                        default:
+                            errorMessage += ` (Error: ${error.code})`;
+                    }
+                }
+                alert(errorMessage);
+            } finally {
+                submitPostBtn.disabled = false;
+                submitPostBtn.textContent = 'Submit';
+            }
+        });
+
+        async function renderPosts() {
+            postsContainer.innerHTML = '';
+            try {
+                const snapshot = await firebase.firestore().collection('posts').orderBy('timestamp', 'desc').get();
+                snapshot.forEach(doc => {
+                    const post = doc.data();
+                    const postCard = document.createElement('div');
+                    postCard.className = 'post-card';
+
+                    let mediaElement = '';
+                    if (post.mediaType === 'image') {
+                        mediaElement = `<img src="${post.mediaUrl}" alt="Post Image">`;
+                    } else if (post.mediaType === 'video') {
+                        mediaElement = `<video controls src="${post.mediaUrl}"></video>`;
+                    }
+
+                    let deleteButton = '';
+                    if (isLoggedIn) {
+                        deleteButton = `<button class="delete-btn" data-id="${doc.id}" data-path="${post.storagePath || ''}"><i class="fas fa-trash"></i></button>`;
+                    }
+
+                    postCard.innerHTML = `
+                        ${mediaElement}
+                        <div class="post-content">
+                            <p>${post.content}</p>
+                            ${deleteButton}
+                        </div>
+                    `;
+                    postsContainer.appendChild(postCard);
+                });
+
+                document.querySelectorAll('.delete-btn').forEach(button => {
+                    button.addEventListener('click', async (e) => {
+                        const postId = e.currentTarget.getAttribute('data-id');
+                        const storagePath = e.currentTarget.getAttribute('data-path');
+                        
+                        if (confirm('Are you sure you want to delete this post?')) {
+                            try {
+                                await firebase.firestore().collection('posts').doc(postId).delete();
+                                
+                                if (storagePath) {
+                                    const storageRef = firebase.storage().ref(storagePath);
+                                    await storageRef.delete();
+                                }
+                                
+                                renderPosts();
+                            } catch (error) {
+                                console.error("Error deleting post: ", error);
+                                alert("Failed to delete post.");
+                            }
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error("Error fetching posts: ", error);
+            }
+        }
+
+        window.onload = renderPosts;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[debug] [2026-06-06T17:07:47.471Z] ----------------------------------------------------------------------
+[debug] [2026-06-06T17:07:47.473Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/gm9mcvzb17vv8cla08khrg29vxn3sq4r-firebase-tools-15.1.0/lib/node_modules/firebase-tools/lib/bin/firebase.js init hosting:github --project dr-sari-fusha
+[debug] [2026-06-06T17:07:47.474Z] CLI Version:   15.1.0
+[debug] [2026-06-06T17:07:47.474Z] Platform:      linux
+[debug] [2026-06-06T17:07:47.474Z] Node Version:  v20.19.1
+[debug] [2026-06-06T17:07:47.474Z] Time:          Sat Jun 06 2026 17:07:47 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-06-06T17:07:47.474Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/Dr.-Sari-Fusha---Scientific-Research-s
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-06-06T17:07:48.815Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-06-06T17:07:48.815Z] > authorizing via signed-in user (hamza.f1re.blaack.mohammed.88@gmail.com)
+[debug] [2026-06-06T17:07:48.816Z] Checked if tokens are valid: true, expires at: 1780768816728
+[debug] [2026-06-06T17:07:48.816Z] Checked if tokens are valid: true, expires at: 1780768816728
+[debug] [2026-06-06T17:07:48.818Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dr-sari-fusha [none]
+[debug] [2026-06-06T17:07:49.125Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dr-sari-fusha 200
+[debug] [2026-06-06T17:07:49.126Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dr-sari-fusha {"projectId":"dr-sari-fusha","projectNumber":"250182826297","displayName":"DR Sari Fusha","name":"projects/dr-sari-fusha","resources":{"hostingSite":"dr-sari-fusha"},"state":"ACTIVE","etag":"1_f8c1873d-2bac-437a-b228-dc9a82ebf857"}
+[info] i  Using project dr-sari-fusha (DR Sari Fusha) . 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/user/Dr.-Sari-Fusha---Scientific-Research-s 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=55705952&redirect_uri=http%3A%2F%2Flocalhost%3A9006&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
